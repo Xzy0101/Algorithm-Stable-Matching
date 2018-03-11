@@ -1,0 +1,16 @@
+Propose-and-reject algorithm.  [David Gale-and Lloyd Shapley 1962] 
+Intuitive method that guarantees to find a stable matching. 
+
+pseudocode
+
+Initialize each person to be free. 
+while (some man is free and hasn't proposed to every woman) { 
+	Choose such a man m 
+	w = 1st woman on m's list to whom m has not yet proposed 
+	if (w is free) 
+		assign m and w to be engaged 
+	elseif (w prefers m to her fiancé m') 
+		assign m and w to be engaged, and m' to be free 
+	else 
+		w rejects m 
+}
