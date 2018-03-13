@@ -13,7 +13,7 @@ public class GaleShapleyAlgorithm {
 			elem = queue.removeFirst();
 			pelem = active.get(elem).next();
 			if(pelem == -1) {
-				return;
+				continue;
 			}
 			newpos = passive.get(pelem).search(elem);
 			if(passive.get(pelem).getCurrentPos() == -1) {
@@ -79,6 +79,7 @@ class PrefList{
 			this.current++;
 			return this.list.get(this.current);
 		}else {
+			this.current = -1;
 			return -1;
 		}
 	}
